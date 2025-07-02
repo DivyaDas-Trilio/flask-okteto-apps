@@ -1,0 +1,11 @@
+name: flask-app
+image: python:3.11
+command: bash
+volumes:
+  - /root/.cache/pip
+forward:
+  - 8080:8080
+sync:
+  - .:/app
+workdir: /app
+
